@@ -1,0 +1,8 @@
+
+/node_modules
+
+/dist
+
+# testing
+/coverage
+/reports

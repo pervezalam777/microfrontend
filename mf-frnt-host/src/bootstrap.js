@@ -6,7 +6,7 @@ import GlobalStyleInjectorComponent from 'mfShared/globalStyleInjectorComponent'
 /* eslint-enable import/no-unresolved */
 
 // Internal dependencies
-import App from './App(mf-name)';
+import App from './AppFrntHost';
 
 /**
  * Render Application

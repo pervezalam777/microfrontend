@@ -9,7 +9,7 @@ let config = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: (port),
+    port: 4000,
     historyApiFallback: true,
     hot: false,
     hotOnly: false,
@@ -24,7 +24,7 @@ let config = {
     extensions: ['.js', '.mjs', '.jsx']
   },
   output: {
-    publicPath: 'http://localhost:(port)/',
+    publicPath: 'http://localhost:4000/',
     chunkFilename: '[id].[contenthash].js',
   },
   module: {
@@ -65,14 +65,14 @@ let config = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: '(microfrontend-name)',
+      name: 'mfFrntHost',
       filename: 'remoteEntry.js',
       remotes: {
         'mfShared': 'mfShared@http://localhost:3000/remoteEntry.js',
-        '(microfrontend-name)': '(microfrontend-name)@http://localhost:3003/remoteEntry.js',
+        'mfFrntHost': 'mfFrntHost@http://localhost:4000/remoteEntry.js',
       },
       exposes: {
-        './App(microfrontend-name)': './src/App(microfrontend-name)',
+        './AppFrntHost': './src/AppFrntHost',
       },
       shared: [
         {

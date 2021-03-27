@@ -1,0 +1,13 @@
+{
+  "babelrc": true,
+  "plugins": [
+    [
+      "module-resolver", 
+      {
+        "alias": {
+          "mfSharedLibrary": "../mf-shared-library/src"
+        }
+      }
+    ]
+  ]
+}
