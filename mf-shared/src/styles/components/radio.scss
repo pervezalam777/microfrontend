@@ -1,0 +1,34 @@
+.sh-radio {
+  display: inline-flex;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 1.6rem;
+  align-items: center;
+  & input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__label {
+    display: inline-block;
+    padding-left: 0.8rem;
+  }
+  &__checked{
+    display: none;
+  }
+  input:checked ~ &__checked {
+    display: inline-block;
+  }
+  input:checked ~ &__unchecked {
+    display: none;
+  }
+  &:hover {
+    .sh-checkbox__checked {
+      display: inline-block;
+    }
+    .sh-checkbox__unchecked {
+      display: none;
+    }
+  }
+}
