@@ -2,8 +2,6 @@
 # (Microfrontend name)
 (microfrontend description)
 
-**`Runs on (PORT Number)`**
-
 ## Event dispatch
 (list all the events this microfrontend dispatches)
 

@@ -10,6 +10,7 @@ Having a file naming convention in your application makes in more maintainable. 
 ## BEM Pattern
 `Block__Element--modifier` CSS class naming should follow BEM syntax (recommended opinion)
 
+
 # References 
 [7-1 pattern](https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/7-1-sass-architecture)
 ```sh

@@ -9,7 +9,7 @@ let config = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3003,
+    port: 3000,
     historyApiFallback: true,
     hot: false,
     hotOnly: false,
@@ -24,7 +24,7 @@ let config = {
     extensions: ['.js', '.mjs', '.jsx']
   },
   output: {
-    publicPath: 'http://localhost:(port)/',
+    publicPath: 'http://localhost:3000/',
     chunkFilename: '[id].[contenthash].js',
   },
   module: {
@@ -65,14 +65,17 @@ let config = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: '(microfrontend-name)',
+      name: 'mfShared',
       filename: 'remoteEntry.js',
       remotes: {
         'mfShared': 'mfShared@http://localhost:3000/remoteEntry.js',
-        '(microfrontend-name)': '(microfrontend-name)@http://localhost:3003/remoteEntry.js',
       },
       exposes: {
-        './App(microfrontend-name)': './src/App(microfrontend-name)',
+        './configuration':'./src/configuration/index',
+        './component': './src/components/index',
+        './hooks': './src/hooks/index',
+        './services': './src/services/index',
+        './globalStyleInjectorComponent': './src/globalStyleInjectorComponent'
       },
       shared: [
         {
@@ -96,12 +99,6 @@ let config = {
         {
           from: path.resolve(__dirname, 'public',  'favicon.ico'),
         }
-        // if microfrontend have some assets
-        // ,
-        // {
-        //   from: path.resolve(__dirname, 'public', 'assets'),
-        //   to: path.resolve(__dirname, 'dist', 'assets')
-        // }
       ]
     }),
   ],

@@ -1,5 +1,5 @@
 {
-  "name": "@mf/(microfrontend-name)",
+  "name": "@mf/sh-shared",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
@@ -55,7 +55,7 @@
   "scripts": {
     "start": "webpack-cli serve",
     "build": "webpack --mode production",
-    "serve": "serve dist -p (port-microfrontend will run on) --cors",
+    "serve": "serve dist -p 3000 --cors",
     "clean": "rm -rf dist",
     "precommit": "npm run lint",
     "lint": "eslint --ignore-path .gitignore .",
