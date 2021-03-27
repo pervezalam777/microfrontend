@@ -1,0 +1,9 @@
+# node externa depenence packages 
+**/node_modules
+
+# deployable bulid folder
+**/dist
+
+# testing
+**/coverage
+**/reports
