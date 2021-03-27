@@ -14,13 +14,13 @@ complete micro frontend architecture with react and webpack5 module federation p
   - [x] `README.md` file that talks about microfrontend and Events it dispatches
   - [x] `.gitignore`
   - [x] `Sonar enabled`
-- [] Should have Client and back-office web application runs on microfrontend
-- [] Should have At least `4 micro-frontend application` for client facing
-- [] Should have At least `3 micro-frontend application` for back-office facing
-- [] Should have `Host micro frontend` for `client` and `back-office` web application
-- [] Should have `shared microfrontend` (eagerly loaded microfrontend paired with each microfrontend)
-  - [] Should provide `common components` used across client and back-office microfrontend
-  - [] Should provide `common hooks`, `services` and `global state`
-  - [] Should provide channel or mechanism for communication among microfrontend 
-  - [] Should have `global Style injected` in each microfrontend when it run independently and in host app when all microfrontend runs in host container
+- [ ] Should have Client and back-office web application runs on microfrontend
+- [ ] Should have At least `4 micro-frontend application` for client facing
+- [ ] Should have At least `3 micro-frontend application` for back-office facing
+- [ ] Should have `Host micro frontend` for `client` and `back-office` web application
+- [ ] Should have `shared microfrontend` (eagerly loaded microfrontend paired with each microfrontend)
+  - [ ] Should provide `common components` used across client and back-office microfrontend
+  - [ ] Should provide `common hooks`, `services` and `global state`
+  - [ ] Should provide channel or mechanism for communication among microfrontend 
+  - [ ] Should have `global Style injected` in each microfrontend when it run independently and in host app when all microfrontend runs in host container
   - 
