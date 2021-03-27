@@ -1,0 +1,29 @@
+version: "2.0"
+services:
+  mf-shared:
+    build:
+      dockerfile: Dockerfile
+      context: ../mf-shared
+    ports:
+      - "3000:80"
+    container_name: mf-shared
+    stdin_open: true
+
+  mf-frnt-host:
+    build:
+      dockerfile: Dockerfile
+      context: ../mf-frnt-host
+    ports:
+      - "4000:80"
+    container_name: mf-frnt-host
+    stdin_open: true
+  
+  mf-bck-host:
+    build:
+      dockerfile: Dockerfile
+      context: ../mf-bck-host
+    ports:
+      - "5000:80"
+    container_name: mf-bck-host
+    stdin_open: true
+  

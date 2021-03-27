@@ -1,0 +1,13 @@
+{
+  "name": "mf-builder",
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @mf/* --parallel start",
+    "build": "lerna run --scope @mf/* build",
+    "serve": "lerna run --scope @mf/* --parallel serve",
+    "clean": "lerna run --scope @mf/* --parallel clean"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
