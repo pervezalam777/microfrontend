@@ -84,9 +84,9 @@ export function constructRestApiEndPoint(path, pathParams) {
 }
 
 /**
- * 
+ * Append query params to the url
  * @param {URL} url Url object
- * @param {*} queryParams 
+ * @param {object} queryParams query params object
  */
 export function appendQueryParamsToUrl(url, queryParams = {}) {
   const keys = Object.keys(queryParams);
