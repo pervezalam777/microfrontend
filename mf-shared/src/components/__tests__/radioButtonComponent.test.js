@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import RadioButtonComponent from '../radioButtonComponent';
@@ -23,7 +23,47 @@ describe('Radio button component', () => {
         onChange={mockFn}
       />
     );
-    expect(container.innerHTML.search('checked')).toBeTruthy();
+    const input = container.getElementsByTagName('input')[0];
+    expect(input).toBeChecked();
   });
-  it('should notify check box change state', () => {});
+  
+  it('should notify check box change state', () => {
+    const mockFn = jest.fn();
+    function RadioGroup() {
+      return (
+        <div>
+           <RadioButtonComponent
+              name='gender'
+              label='male'
+              id='male'  
+              onChange={mockFn}
+            />
+            <RadioButtonComponent
+              name='gender'
+              label='female'
+              id='female'  
+              onChange={mockFn}
+            />
+        </div>
+      )
+    }
+
+    const {container} = render(<RadioGroup />);
+    const inputs = container.getElementsByTagName('input');
+    for(let input of inputs){
+      expect(input).not.toBeChecked();
+    }
+    
+    act(() => {
+      fireEvent.click(inputs[0])
+    })
+    expect(inputs[0]).toBeChecked();
+    expect(inputs[1]).not.toBeChecked();
+    
+    act(() => {
+      fireEvent.click(inputs[1]);
+    })
+    expect(inputs[0]).not.toBeChecked();
+    expect(inputs[1]).toBeChecked();
+  });
 });

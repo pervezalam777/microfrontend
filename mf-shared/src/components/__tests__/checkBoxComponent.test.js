@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act, waitFor, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import CheckBoxComponent from '../checkBoxComponent';
@@ -23,7 +23,23 @@ describe('Checkbox component', () => {
         onChange={mockFn}
       />
     );
-    expect(container.innerHTML.search('checked')).toBeTruthy();
+    const input = container.getElementsByTagName('input')[0];
+    expect(input).toBeChecked();
   });
-  it('should notify check box change state', () => {});
+
+  it('should notify check box change state', () => {
+    const mockFn = jest.fn();
+    const { container } = render(
+      <CheckBoxComponent 
+        onChange={mockFn}
+      />
+    );
+    const input = container.getElementsByTagName('input')[0];
+    expect(input).not.toBeChecked();
+    act(() => {
+      fireEvent.click(input);
+    })
+    expect(input).toBeChecked();
+    expect(mockFn).toHaveBeenCalled();
+  });
 });
