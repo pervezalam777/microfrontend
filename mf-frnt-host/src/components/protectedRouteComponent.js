@@ -6,8 +6,13 @@ import {
   Redirect
 } from 'react-router-dom';
 
-function ProtectedRouteComponent({ children, ...rest }) {
-  let { isLoggedIn } = rest;
+/**
+ * Protected route component render component if user is logged in
+ * otherwise it redirects user to /login route
+ * @param {Object} props component properties 
+ * @returns {ReactElement} 
+ */
+function ProtectedRouteComponent({ children, isLoggedIn, ...rest }) {
   return (
     <Route
       {...rest}
@@ -22,7 +27,8 @@ function ProtectedRouteComponent({ children, ...rest }) {
 }
 
 ProtectedRouteComponent.propTypes = {
-  children: PropTypes.object
+  isLoggedIn: PropTypes.bool.isRequired,
+  children: PropTypes.object,
 };
 
 export default ProtectedRouteComponent;

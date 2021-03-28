@@ -108,6 +108,7 @@ let config = {
 };
 
 module.exports = (env, argv) => {
+  console.log('Environment ---- ', env);
   if (argv.mode !== 'production') {
     config.devtool = 'eval-source-map';
   }

@@ -26,9 +26,9 @@ class ErrorBoundary extends React.Component {
                       ? `with ${this.props.componentName}`
                       : this.props.componentName;
       return (
-        <div>
-          <h2>Something went wrong {compName}</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
+        <div className='error-boundary'>
+          <h2 className='error-boundary__heading'>Something went wrong {compName}</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }} className='error-boundary__details' >
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
