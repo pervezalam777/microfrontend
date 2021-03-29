@@ -1,0 +1,23 @@
+.landing-banner {
+  position:relative;
+  &__btn {
+    position: absolute;
+    top: 10rem;
+    &--left {
+      left:1rem;
+    }
+    &--right {
+      right: 1rem;
+    }
+  }
+  &__slide {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    position:absolute;
+    top:0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 40vh;
+  }
+}

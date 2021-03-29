@@ -71,3 +71,9 @@ $ npm run fix:lint
 For formatting code files, we are using `Prettier` settings please check '.prettierrc'.
 
 > `In order to adhere to standard formatting please ignore setting up formatter in your IDE (VSCode) via plugins`
+
+## TODO
+- [ ] Components
+- [ ] Unit test case
+- [ ] Integrate with front end host
+- [ ] Load content from micro-service

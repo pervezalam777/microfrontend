@@ -6,6 +6,7 @@ import React from 'react';
 /* eslint-enable import/no-unresolved */
 
 // Internal dependencies
+import BannerComponent from './components/bannerComponent';
 import './styles/styleLanding.scss';
 
 /**
@@ -14,7 +15,7 @@ import './styles/styleLanding.scss';
 function App() {
   return (
     <div className='lading-app'>
-      Landing microfrontend
+      <BannerComponent />
     </div>
   );
 } 
