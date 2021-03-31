@@ -75,7 +75,8 @@ let config = {
         './component': './src/components/index',
         './hooks': './src/hooks/index',
         './services': './src/services/index',
-        './globalStyleInjectorComponent': './src/globalStyleInjectorComponent'
+        './globalStyleInjectorComponent': './src/globalStyleInjectorComponent',
+        './store': './src/store/index'
       },
       shared: [
         {
