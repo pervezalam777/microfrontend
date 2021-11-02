@@ -13,13 +13,12 @@ import App from './AppAuth';
  * @returns {ReactElement}
  */
 function RenderApp() {
-  return (
-    <>
-      <GlobalStyleInjectorComponent />
-      <App />
-    </>
-  );
+	return (
+		<>
+			<GlobalStyleInjectorComponent />
+			<App />
+		</>
+	);
 }
-
 
 ReactDOM.render(<RenderApp />, document.getElementById('root'));

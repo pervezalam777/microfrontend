@@ -6,7 +6,7 @@ import React from 'react';
  * @returns {ReactElement}
  */
 function SCSSComponent() {
-  return <div>SGV Mock</div>;
+	return <div>SGV Mock</div>;
 }
 
 export default SCSSComponent;

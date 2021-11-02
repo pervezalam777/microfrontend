@@ -12,11 +12,7 @@ import './styles/styleAuth.scss';
  * App component
  */
 function App() {
-  return (
-    <div className='(mf-name)'>
-      Authentication Component
-    </div>
-  );
-} 
+	return <div className='(mf-name)'>Authentication Component</div>;
+}
 
 export default App;
